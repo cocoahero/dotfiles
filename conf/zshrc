@@ -1,14 +1,10 @@
 autoload -Uz vcs_info
-
-precmd() {
-  vcs_info
-}
+precmd() { vcs_info }
 
 zstyle ':vcs_info:git:*' formats '%b'
 
 setopt PROMPT_SUBST
-
-PROMPT="(%2~)[${vcs_info_msg_0_}] > "
+PROMPT='(%2~)[${vcs_info_msg_0_}] > '
 
 git-cleanup() {
   git fetch --all --prune
@@ -16,4 +12,3 @@ git-cleanup() {
 }
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
-
