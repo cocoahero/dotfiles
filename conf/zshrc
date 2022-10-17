@@ -12,3 +12,5 @@ git-cleanup() {
 }
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
